@@ -1,3 +1,21 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.sideber{
+  width: 1;
+}
+
+.mainright{
+  width: 3;
+}
