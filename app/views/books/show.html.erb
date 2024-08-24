@@ -4,7 +4,7 @@
     <div class="col-md-3">
 
   <div class="sideber">
-    <%= render 'users/info', user: @user, book: @newbook %>
+    <%= render 'users/info', user: @user, book: @new_book %>
   </div>
   </div>
 
@@ -29,12 +29,16 @@
             <%= @book.body %>
           </td>
           <td>
+            <%if @book.user == current_user %>
             <%= link_to edit_book_path, class:"btn btn-sm btn-success edit_book" do %>
             Edit
             <% end %>
+            <% end %>
           </td>
           <td>
+            <% if @book.user == current_user %>
             <%= link_to "Destroy", book_path, method: :delete, "data-confirm" => "本当に消しますか？" , class: "btn btn-sm btn-danger destroy_book_145229", rel: "nofollow" %>
+            <% end %>
           </td>
         </tr>
       </tbody>
